@@ -3,6 +3,7 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     public Rigidbody2D selectedCardRigidBody;
+    [SerializeField] private float force = 3;
     
     [Header("Hand Settings")]
     [SerializeField] private int handIndex = 0;
@@ -45,6 +46,6 @@ public class Hand : MonoBehaviour
         transform.Translate(new Vector3(x, y, 0));
         
         if (!selectedCardRigidBody) return;
-        
+        selectedCardRigidBody.AddForce(transform.position - selectedCardRigidBody.transform.position * force);
     }
 }
