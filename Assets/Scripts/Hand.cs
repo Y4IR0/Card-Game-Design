@@ -46,6 +46,6 @@ public class Hand : MonoBehaviour
         transform.Translate(new Vector3(x, y, 0));
         
         if (!selectedCardRigidBody) return;
-        selectedCardRigidBody.AddForce(transform.position - selectedCardRigidBody.transform.position * force);
+        selectedCardRigidBody.AddForce((transform.position - selectedCardRigidBody.transform.position) * force);
     }
 }
