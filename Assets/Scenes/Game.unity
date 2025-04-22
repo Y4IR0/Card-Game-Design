@@ -127,9 +127,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3362486032104062255, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
+      propertyPath: force
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6281484680182272729, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
       propertyPath: m_Name
       value: Hand2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7312822761193807209, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
+      propertyPath: m_Color.a
+      value: 0.101960786
       objectReference: {fileID: 0}
     - target: {fileID: 7394592943806117518, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -176,6 +184,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
+--- !u!50 &423995313 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 8239466577549601669, guid: a92a950b1c5c23e418dac548f8a3a11c, type: 3}
+  m_PrefabInstance: {fileID: 1479171941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &477618088
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +552,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 581970178986567429, guid: 993e62431920ebf4185aca11673181d9, type: 3}
+      propertyPath: force
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 581970178986567429, guid: 993e62431920ebf4185aca11673181d9, type: 3}
+      propertyPath: selectedCardRigidBody
+      value: 
+      objectReference: {fileID: 423995313}
     - target: {fileID: 4622029033439718564, guid: 993e62431920ebf4185aca11673181d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.3661013
@@ -578,6 +599,10 @@ PrefabInstance:
     - target: {fileID: 4622029033439718564, guid: 993e62431920ebf4185aca11673181d9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883657358192019267, guid: 993e62431920ebf4185aca11673181d9, type: 3}
+      propertyPath: m_Color.a
+      value: 0.101960786
       objectReference: {fileID: 0}
     - target: {fileID: 8184783220102498547, guid: 993e62431920ebf4185aca11673181d9, type: 3}
       propertyPath: m_Name
@@ -638,6 +663,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5158106684198470037, guid: a92a950b1c5c23e418dac548f8a3a11c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239466577549601669, guid: a92a950b1c5c23e418dac548f8a3a11c, type: 3}
+      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

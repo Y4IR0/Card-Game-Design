@@ -3,12 +3,14 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     public Rigidbody2D selectedCardRigidBody;
-    [SerializeField] private float force = 3;
+    [SerializeField] private float force = 100;
     
     [Header("Hand Settings")]
     [SerializeField] private int handIndex = 0;
     [SerializeField] private float speed = 3;
     [SerializeField] private float angularSpeed = 30;
+
+    private Vector3 previousPosition;
 
 
 
@@ -46,6 +48,18 @@ public class Hand : MonoBehaviour
         transform.Translate(new Vector3(x, y, 0));
         
         if (!selectedCardRigidBody) return;
-        selectedCardRigidBody.AddForce(transform.position - selectedCardRigidBody.transform.position * force);
+        
+        Vector3 NewPos = transform.position;
+        float VelocityForce = (NewPos - previousPosition).magnitude;
+        Vector3 VelocityVector = NewPos - previousPosition;
+        Vector3 NewVelocity = VelocityVector * VelocityForce * force * 1.5f / (selectedCardRigidBody.mass * 10);
+        
+        float MaxSpeed = 15;
+        if (NewVelocity.magnitude > MaxSpeed) { NewVelocity *= (MaxSpeed / NewVelocity.magnitude); }
+        
+        selectedCardRigidBody.linearVelocity = new Vector3(NewVelocity.x, NewVelocity.y, 0);
+        //selectedCardRigidBody.AddForce(transform.position - selectedCardRigidBody.transform.position * force);
+        
+        previousPosition = selectedCardRigidBody.transform.position;
     }
 }
