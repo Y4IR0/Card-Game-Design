@@ -129,7 +129,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3362486032104062255, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
       propertyPath: force
-      value: 100
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3362486032104062255, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
+      propertyPath: angularSpeed
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 6281484680182272729, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
       propertyPath: m_Name
@@ -554,7 +558,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 581970178986567429, guid: 993e62431920ebf4185aca11673181d9, type: 3}
       propertyPath: force
-      value: 100
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 581970178986567429, guid: 993e62431920ebf4185aca11673181d9, type: 3}
+      propertyPath: angularSpeed
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 581970178986567429, guid: 993e62431920ebf4185aca11673181d9, type: 3}
       propertyPath: selectedCardRigidBody
@@ -663,10 +671,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5158106684198470037, guid: a92a950b1c5c23e418dac548f8a3a11c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8239466577549601669, guid: a92a950b1c5c23e418dac548f8a3a11c, type: 3}
-      propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedCardRigidBody: {fileID: 0}
+  force: 100
   handIndex: 0
   speed: 3
   angularSpeed: 30
