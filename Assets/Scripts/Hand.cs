@@ -2,16 +2,27 @@ using UnityEngine;
 
 public class Hand : MonoBehaviour
 {
+    SpriteRenderer spriteRenderer;
+    
     public Rigidbody2D selectedCardRigidBody;
-    [SerializeField] private float force = 150;
     
     [Header("Hand Settings")]
     [SerializeField] private int handIndex = 0;
     [SerializeField] private float speed = 3;
     [SerializeField] private float angularSpeed = 5000;
+    [SerializeField] private float force = 150;
+    
+    [Header("Sprites")]
+    [SerializeField] private Sprite handSprite1;
+    [SerializeField] private Sprite handSprite2;
 
     private Vector3 previousPosition;
 
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
 
     void Update()
@@ -20,6 +31,8 @@ public class Hand : MonoBehaviour
         float y = 0;
 
         float rotation = 0;
+        
+        bool isSelecting = false;
         
         if (handIndex == 1)
         {
@@ -31,10 +44,14 @@ public class Hand : MonoBehaviour
                 x -= speed;
             if (Input.GetKey(KeyCode.D))
                 x += speed;
+            
             if (Input.GetKey(KeyCode.Q))
                 rotation += angularSpeed;
             if (Input.GetKey(KeyCode.E))
                 rotation -= angularSpeed;
+
+            if (Input.GetKey(KeyCode.C))
+                isSelecting = true;
         }
         else if (handIndex == 2)
         {
@@ -46,10 +63,14 @@ public class Hand : MonoBehaviour
                 x -= speed;
             if (Input.GetKey(KeyCode.L))
                 x += speed;
+            
             if (Input.GetKey(KeyCode.U))
                 rotation += angularSpeed;
             if (Input.GetKey(KeyCode.O))
                 rotation -= angularSpeed;
+            
+            if (Input.GetKey(KeyCode.Period))
+                isSelecting = true;
         }
         
         x *= Time.deltaTime;
@@ -57,6 +78,33 @@ public class Hand : MonoBehaviour
         rotation *= Time.deltaTime;
         
         transform.Translate(new Vector3(x, y, 0));
+
+
+
+
+        if (isSelecting && !selectedCardRigidBody)
+        {
+            if (Physics.SphereCast(transform.position, .5f, transform.forward, out RaycastHit hit, 10, LayerMask.GetMask("Card")))
+            {
+                selectedCardRigidBody = hit.collider.GetComponent<Rigidbody2D>();
+            }
+        }
+        else if (isSelecting && selectedCardRigidBody)
+        {
+            selectedCardRigidBody = null;
+        }
+        
+        
+        
+        
+        
+        // Sprite
+        if (selectedCardRigidBody != null)
+            spriteRenderer.sprite = handSprite1;
+        else
+            spriteRenderer.sprite = handSprite2;
+        
+        
         
         if (!selectedCardRigidBody) return;
         

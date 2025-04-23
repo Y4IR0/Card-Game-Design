@@ -46,10 +46,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedCardRigidBody: {fileID: 0}
-  force: 100
+  force: 150
   handIndex: 0
   speed: 3
-  angularSpeed: 30
+  angularSpeed: 5000
+  handSprite1: {fileID: -9130327353728628328, guid: a390ab4cafbb3214d9ff3083739a4a55, type: 3}
+  handSprite2: {fileID: -209663254022021088, guid: c0c18088ae3a34f40a2605c89b6d0e51, type: 3}
 --- !u!212 &7724040546166876816
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -94,7 +96,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -9130327353728628328, guid: a390ab4cafbb3214d9ff3083739a4a55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
