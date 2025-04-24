@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5158106684198470037}
+  - component: {fileID: 2409661460720229796}
   - component: {fileID: 6080840897507166893}
   - component: {fileID: 8239466577549601669}
   - component: {fileID: 5964001194626239467}
@@ -29,11 +30,24 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.253827, y: -0.28695765, z: 0}
-  m_LocalScale: {x: 1.2, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1.2, y: 0.5, z: 0.6}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2409661460720229796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2207729469281694180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad95001d0e996e48a8f496d47a8a963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotVectorScalar: 3
 --- !u!212 &6080840897507166893
 SpriteRenderer:
   m_ObjectHideFlags: 0
