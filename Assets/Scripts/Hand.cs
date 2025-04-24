@@ -94,8 +94,11 @@ public class Hand : MonoBehaviour
 
             if (hit.collider)
             {
-                selectedCardRigidBody = hit.collider.GetComponent<Rigidbody2D>();
-                selectedCardRigidBody.gravityScale = 0;
+                if (hit.collider.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+                {
+                    selectedCardRigidBody = rb;
+                    selectedCardRigidBody.gravityScale = 0;
+                }
             }
         }
         else if (isSelecting && selectedCardRigidBody)

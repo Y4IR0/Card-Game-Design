@@ -42,7 +42,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2207729469281694180}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5ad95001d0e996e48a8f496d47a8a963, type: 3}
   m_Name: 
@@ -117,7 +117,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 1
-  m_AngularDamping: 10
+  m_AngularDamping: 90
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: a30305465b58c014bb7bb2b2c99af76b, type: 2}
   m_IncludeLayers:
