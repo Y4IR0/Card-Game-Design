@@ -91,13 +91,16 @@ public class Hand : MonoBehaviour
             */
             
             RaycastHit2D hit = Physics2D.CircleCast(transform.position, .2f, Vector2.zero);
-            
+
             if (hit.collider)
+            {
                 selectedCardRigidBody = hit.collider.GetComponent<Rigidbody2D>();
-                
+                selectedCardRigidBody.gravityScale = 0;
+            }
         }
         else if (isSelecting && selectedCardRigidBody)
         {
+            selectedCardRigidBody.gravityScale = 1;
             selectedCardRigidBody = null;
         }
         

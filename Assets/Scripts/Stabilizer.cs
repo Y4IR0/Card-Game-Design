@@ -14,6 +14,8 @@ public class Stabilizer : MonoBehaviour
     
     void FixedUpdate()
     {
+        if (rb.gravityScale == 0) return;
+        
         Vector3 axis = Vector3.zero;
 		
         if (transform.up != Vector3.up)
