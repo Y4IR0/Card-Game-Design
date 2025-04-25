@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: handIndex
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2370269196700535510, guid: 1482d836fdeca2d4c8c25878ad4cec17, type: 3}
+      propertyPath: cardPrefab
+      value: 
+      objectReference: {fileID: 2207729469281694180, guid: a92a950b1c5c23e418dac548f8a3a11c, type: 3}
     - target: {fileID: 6440500911322572064, guid: 1482d836fdeca2d4c8c25878ad4cec17, type: 3}
       propertyPath: m_Name
       value: Hand2

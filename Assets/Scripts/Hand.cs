@@ -5,6 +5,8 @@ public class Hand : MonoBehaviour
     SpriteRenderer spriteRenderer;
     
     public Rigidbody2D selectedCardRigidBody;
+
+    [SerializeField] private GameObject cardPrefab;
     
     [Header("Hand Settings")]
     [SerializeField] private int handIndex = 0;
@@ -69,7 +71,7 @@ public class Hand : MonoBehaviour
             if (Input.GetKey(KeyCode.O))
                 rotation -= angularSpeed;
             
-            if (Input.GetKeyDown(KeyCode.Period))
+            if (Input.GetKeyDown(KeyCode.N))
                 isSelecting = true;
         }
         
@@ -94,7 +96,22 @@ public class Hand : MonoBehaviour
 
             if (hit.collider)
             {
-                if (hit.collider.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+                if (hit.collider.CompareTag("CardBox"))
+                {
+                    GameObject newCard = Instantiate(cardPrefab, transform.position, Quaternion.identity);
+
+                    if (newCard.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+                    {
+                        selectedCardRigidBody = rb;
+                        selectedCardRigidBody.gravityScale = 0;
+
+                        selectedCardRigidBody.linearVelocity = Vector2.zero;
+                        selectedCardRigidBody.angularVelocity = 0f;
+
+                        newCard.transform.position = transform.position;
+                    }
+                }
+                else if (hit.collider.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
                 {
                     selectedCardRigidBody = rb;
                     selectedCardRigidBody.gravityScale = 0;
