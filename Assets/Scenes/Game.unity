@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &69205653 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 581970178986567429, guid: 993e62431920ebf4185aca11673181d9, type: 3}
+  m_PrefabInstance: {fileID: 669438242}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeab20d6de9fcae4d867a68d55b21d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &179258565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1073,6 +1084,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1209947547 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3362486032104062255, guid: afcded4a4a57ead438a3ef64b5c6300e, type: 3}
+  m_PrefabInstance: {fileID: 179258565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeab20d6de9fcae4d867a68d55b21d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1274905968
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,8 +1402,8 @@ Transform:
   m_GameObject: {fileID: 1462444892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.2, y: 6.8, z: 1}
+  m_LocalPosition: {x: 9, y: 2.4879, z: 0}
+  m_LocalScale: {x: 0.2, y: 8.77608, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1720023844}
@@ -1549,7 +1571,7 @@ Transform:
   m_GameObject: {fileID: 1766813461}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.9, z: 0}
+  m_LocalPosition: {x: 0, y: 6.47, z: 0}
   m_LocalScale: {x: 20, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2028,7 +2050,7 @@ Transform:
   m_GameObject: {fileID: 1842374297}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.42, z: 0}
+  m_LocalPosition: {x: 0, y: 3.4, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2092,6 +2114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5089bacd5415f744c9620f8a6bdbca88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand1: {fileID: 69205653}
+  hand2: {fileID: 1209947547}
   winScreen: {fileID: 1917360985}
 --- !u!1 &1913249436
 GameObject:
@@ -2120,8 +2144,8 @@ Transform:
   m_GameObject: {fileID: 1913249436}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9, y: 1.5, z: 0}
-  m_LocalScale: {x: 0.2, y: 6.8, z: 1}
+  m_LocalPosition: {x: -9, y: 2.5202, z: 0}
+  m_LocalScale: {x: 0.2, y: 8.84068, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1720023844}
