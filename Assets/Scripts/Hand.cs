@@ -96,6 +96,7 @@ public class Hand : MonoBehaviour
 
             if (hit.collider)
             {
+                // If it's cardbox
                 if (hit.collider.CompareTag("CardBox"))
                 {
                     GameObject newCard = Instantiate(cardPrefab, transform.position, Quaternion.identity);
